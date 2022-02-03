@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Animal from './views/Animal/Animal';
-import AnimalDetail from './views/AnimalDetail/AnimalDetail';
+import Home from './views/Home/Home';
+import CharacterView from './views/CharacterView/CharacterView';
 
 export default function App() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Animal />
+          <Home />
         </Route>
-        <Route path="/animal/:id">
-          <AnimalDetail />
+        <Route path="/character/:id">
+          <CharacterView />
         </Route>
       </Switch>
     </BrowserRouter>
