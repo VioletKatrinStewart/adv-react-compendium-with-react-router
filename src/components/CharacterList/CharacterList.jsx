@@ -1,15 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CharacterList({ characters }) {
   return (
     <div>
       {characters.results.map((rickandmorty) => (
-        <div key={rickandmorty.id}>
+        <Link key={rickandmorty.id} to={`/character/${rickandmorty.id}`}>
           <p>Name:{rickandmorty.name}</p>
           <img src={rickandmorty.image} alt={rickandmorty.name}></img>
-          <p>Status:{rickandmorty.status}</p>
-          <p>Species:{rickandmorty.species}</p>
-        </div>
+        </Link>
       ))}
     </div>
   );
