@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getCharacters } from '../../services/characters';
 import CharacterList from '../../components/CharacterList/CharacterList';
+import DarkModeOn from '../../Hooks/DarkMode';
 
 export default function Animal() {
   const [characters, setCharacters] = useState([]);
@@ -23,6 +24,7 @@ export default function Animal() {
     <div>
       <h1>Rick and Morty!</h1>
       <CharacterList characters={characters} loading={loading} setLoading={setLoading} />
+      <DarkModeOn />
     </div>
   );
 }
