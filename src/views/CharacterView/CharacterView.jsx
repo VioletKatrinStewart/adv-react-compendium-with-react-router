@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import CharacterDetail from '../../components/CharacterDetail/CharacterDetail';
 import { getCharacterId } from '../../services/characters';
+import { Link } from 'react-router-dom';
 
 export default function CharacterView() {
   const [character, setCharacter] = useState([]);
@@ -21,6 +22,7 @@ export default function CharacterView() {
   return (
     <div>
       <CharacterDetail character={character} />
+      <Link to="/">Home</Link>
     </div>
   );
 }
